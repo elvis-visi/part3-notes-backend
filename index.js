@@ -93,6 +93,20 @@ app.get("/api/notes/:id", (request, response) => {
   }
 });
 
+app.put("/api/notes/:id", (request, response) => {
+  const id = Number(request.params.id);
+  const body = request.body;
+
+  const note = notes.find((note) => note.id === id);
+  if (note) {
+    const updatedNote = { ...note, important: body.important };
+    notes = notes.map((n) => (n.id !== id ? n : updatedNote));
+    response.json(updatedNote);
+  } else {
+    response.status(404).end();
+  }
+});
+
 app.use(unknownEndpoint);
 
 const PORT = 3001;
