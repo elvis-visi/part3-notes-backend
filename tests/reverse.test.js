@@ -22,14 +22,20 @@ test('reverse of releveler', () => {
 
 //failing example
 test('palindrome of react', () => {
-    const result = reverse('react')
-  
-    expect(result).toBe('tkaer')
-  })
+  const result = reverse('react')
+
+  expect(result).toBe('tkaer')
+})
+
+
+
+
+
+
 
 
 /*
-Expect wraps the resulting value into an object that offers a 
+Expect wraps the resulting value into an object that offers a
 collection of matcher functions
 
 */
