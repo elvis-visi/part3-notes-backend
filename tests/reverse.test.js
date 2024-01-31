@@ -21,11 +21,11 @@ test('reverse of releveler', () => {
 })
 
 //failing example
-test('palindrome of react', () => {
-  const result = reverse('react')
+// test('palindrome of react', () => {
+//   const result = reverse('react')
 
-  expect(result).toBe('tkaer')
-})
+//   expect(result).toBe('tkaer')
+// })
 
 
 
